@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #fff5f5;
+    color: #1f2937;
+    margin: 0;
+}
+
+h1 {
+    color: #b91c1c; /* Christmas red */
+}
+
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    cursor: pointer;
+}
