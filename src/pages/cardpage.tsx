@@ -7,18 +7,23 @@ const CardPage = () => {
     const name = searchParams.get('name') || 'Guest';
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-green-100">
-            <h1 className="text-4xl text-red-700 text-center">
-                🎄 Merry Christmas, {name}! 🎄
-            </h1>
-            <p className="text-xl mt-4 text-center max-w-md">
-                Wishing you a joyous holiday season filled with love, happiness, and lots of laughter!
-            </p>
-            <img
-                src="https://via.placeholder.com/300x200.png?text=Merry+Christmas!" // Replace with a festive image
-                alt="Christmas"
-                className="mt-6 rounded shadow-md"
-            />
+        <div className="flex flex-col items-center justify-center h-screen bg-[url(/bg4.jpg)] bg-cover">
+            <div
+                className="relative bg-[url(/card.jpg)] bg-cover bg-center w-[400px] h-[700px] flex flex-col justify-center items-center p-6 shadow-lg"
+            >
+                <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
+                    Merry Christmas, {name}!
+                </h1>
+                <p className="text-lg text-gray-700 text-center max-w-[80%]">
+                    As we celebrate this season of joy and giving, may your heart be filled with peace and happiness, your home with love and laughter, and your days with countless blessings. May the coming year bring you closer to your dreams and shower you with endless opportunities and success. <br /> <br />
+
+                    Wishing you a wonderful Christmas filled with warmth and cheer and a prosperous New Year full of hope and promise! <br /> <br />
+
+                    With heartfelt gratitude and love, <br />
+
+                    Ashaolu David
+                </p>
+            </div>
             <Howler src={[song]} playing={true} loop={true} volume={0.5} />
         </div>
     );

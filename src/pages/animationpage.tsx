@@ -11,21 +11,20 @@ const AnimationPage = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate(`/card?name=${encodeURIComponent(name || 'Guest')}`);
-        }, 4000); // Adjust time to match animation length
+        }, 5000); // Adjust time to match animation length
         return () => clearTimeout(timer);
     }, [navigate, name]);
 
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-red-100">
+        <div className="flex flex-col items-center justify-center h-screen bg-[url(/bg3.jpg)] bg-cover">
             <Player
                 autoplay
                 loop={false}
                 src={animationData}
                 style={{ height: '300px', width: '300px' }}
             />
-            <p className="text-lg text-green-700 mt-4">Opening your Christmas card...</p>
+            <p className="text-4xl font-bold text-gray-900 mt-4">Opening your Christmas card...</p>
         </div>
     );
-};
-
+}
 export default AnimationPage;
